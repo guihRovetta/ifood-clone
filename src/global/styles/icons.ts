@@ -5,6 +5,7 @@ import OrdersFilledIcon from '../../assets/icons/orders-filled.svg';
 import OrdersOutlinedIcon from '../../assets/icons/orders-outlined.svg';
 import ProfileFilledIcon from '../../assets/icons/profile-filled.svg';
 import ProfileOutlinedIcon from '../../assets/icons/profile-outlined.svg';
+import QrCodeIcon from '../../assets/icons/qr-code.svg';
 import SearchFilledIcon from '../../assets/icons/search-filled.svg';
 import SearchOutlinedIcon from '../../assets/icons/search-outlined.svg';
 import SuperRestaurantIcon from '../../assets/icons/super-restaurant.svg';
@@ -17,6 +18,7 @@ export {
   OrdersOutlinedIcon,
   ProfileFilledIcon,
   ProfileOutlinedIcon,
+  QrCodeIcon,
   SearchFilledIcon,
   SearchOutlinedIcon,
   SuperRestaurantIcon,
