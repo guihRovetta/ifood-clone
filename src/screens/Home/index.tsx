@@ -1,10 +1,62 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import React, { useRef } from 'react';
+import { Text, View } from 'react-native';
+import Animated from 'react-native-reanimated';
+
+import Header from '../../components/Header';
+import { styles } from './styles';
+
+const HEADER_HEIGHT = 48 * 2;
+const data = [...Array(70).keys()];
 
 const Home = () => {
+  const scrollY = useRef(new Animated.Value(0));
+  const scrollYClamped = Animated.diffClamp(scrollY.current, 0, HEADER_HEIGHT);
+
+  const translateY = Animated.interpolateNode(scrollYClamped, {
+    inputRange: [0, HEADER_HEIGHT],
+    outputRange: [0, -HEADER_HEIGHT],
+  });
+
+  const handleScroll = Animated.event(
+    [
+      {
+        nativeEvent: {
+          contentOffset: { y: scrollY.current },
+        },
+      },
+    ],
+    {
+      useNativeDriver: true,
+    }
+  );
+
   return (
-    <View>
-      <Text>Home</Text>
+    <View style={styles.container}>
+      <Animated.View style={[styles.header, { transform: [{ translateY }] }]}>
+        <StatusBar style="dark" />
+        <Header headerHeight={HEADER_HEIGHT} />
+      </Animated.View>
+
+      <Animated.View
+        style={[
+          styles.header,
+          { transform: [{ translateY }], paddingTop: HEADER_HEIGHT },
+        ]}
+      >
+        <Text>Filtros</Text>
+      </Animated.View>
+
+      <Animated.ScrollView
+        bounces={false}
+        scrollEventThrottle={16}
+        contentContainerStyle={{ paddingTop: HEADER_HEIGHT }}
+        onScroll={handleScroll}
+      >
+        {data?.map((item, index) => (
+          <Text key={index}>{item}</Text>
+        ))}
+      </Animated.ScrollView>
     </View>
   );
 };
