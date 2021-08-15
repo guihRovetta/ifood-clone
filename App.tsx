@@ -1,5 +1,6 @@
 import AppLoading from 'expo-app-loading';
 import React, { useState } from 'react';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 import { fetchFonts } from './src/global/config/LoadFonts';
 import Routes from './src/routes';
@@ -17,5 +18,11 @@ export default function App() {
     );
   }
 
-  return <Routes />;
+  return (
+    <SafeAreaProvider>
+      <SafeAreaView style={{ flex: 1 }}>
+        <Routes />
+      </SafeAreaView>
+    </SafeAreaProvider>
+  );
 }
