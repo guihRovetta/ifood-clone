@@ -38,21 +38,13 @@ const Home = () => {
         <Header headerHeight={HEADER_HEIGHT} />
       </Animated.View>
 
-      <Animated.View
-        style={[
-          styles.header,
-          { transform: [{ translateY }], paddingTop: HEADER_HEIGHT },
-        ]}
-      >
-        <Text>Filtros</Text>
-      </Animated.View>
-
       <Animated.ScrollView
         bounces={false}
         scrollEventThrottle={16}
         contentContainerStyle={{ paddingTop: HEADER_HEIGHT }}
         onScroll={handleScroll}
       >
+        <Text>Componente de Filtros</Text>
         {data?.map((item, index) => (
           <Text key={index}>{item}</Text>
         ))}
