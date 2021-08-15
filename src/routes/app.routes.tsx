@@ -21,7 +21,7 @@ const AuthRoutes = () => {
   return (
     <AppTab.Navigator
       screenOptions={{
-        headerTitleStyle: { fontFamily: 'sulsans-regular' },
+        headerShown: false,
         tabBarIconStyle: { width: 18, height: 18 },
         tabBarActiveTintColor: colors?.darkGray,
         tabBarLabelStyle: { fontFamily: 'sulsans-regular' },
