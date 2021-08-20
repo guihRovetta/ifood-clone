@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
   },
   tabText: {
     fontFamily: fonts?.font?.medium,
+    fontSize: fonts?.size?.large,
     color: colors?.lightGray,
   },
   tabTextActive: {

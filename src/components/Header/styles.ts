@@ -24,8 +24,8 @@ export const styles = StyleSheet.create({
   },
   addressText: {
     fontFamily: fonts?.font?.medium,
+    fontSize: fonts?.size?.large,
     color: colors?.darkGray,
-    fontSize: fonts?.size?.medium,
   },
   dropdownIcon: {
     marginLeft: 4,
