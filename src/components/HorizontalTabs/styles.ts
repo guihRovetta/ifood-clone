@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 import { colors } from '../../global/styles/colors';
+import { fonts } from '../../global/styles/fonts';
 
 export const styles = StyleSheet.create({
   tabActive: {
@@ -9,7 +10,7 @@ export const styles = StyleSheet.create({
     paddingBottom: 8,
   },
   tabText: {
-    fontFamily: 'sulsans-medium',
+    fontFamily: fonts?.font?.medium,
     color: colors?.lightGray,
   },
   tabTextActive: {

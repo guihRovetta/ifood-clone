@@ -2,6 +2,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 
 import { colors } from '../global/styles/colors';
+import { fonts } from '../global/styles/fonts';
 import {
   HomeFilledIcon,
   HomeOutlinedIcon,
@@ -24,7 +25,7 @@ const AuthRoutes = () => {
         headerShown: false,
         tabBarIconStyle: { width: 18, height: 18 },
         tabBarActiveTintColor: colors?.darkGray,
-        tabBarLabelStyle: { fontFamily: 'sulsans-regular' },
+        tabBarLabelStyle: { fontFamily: fonts?.font?.regular },
       }}
     >
       <AppTab.Screen
