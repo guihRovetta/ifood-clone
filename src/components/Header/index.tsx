@@ -33,22 +33,15 @@ const Header = ({ headerHeight }: HeaderProps) => {
       >
         <Pressable style={styles.dropdownContainer}>
           <Text style={styles.addressText}>Av. Paulista, 190</Text>
-          <ArrowDownIcon style={styles.dropdownIcon} width={24} />
+          <ArrowDownIcon style={styles.dropdownIcon} width={24} height={24} />
         </Pressable>
 
         <Pressable>
-          <QrCodeIcon width={25} />
+          <QrCodeIcon width={25} height={25} />
         </Pressable>
       </View>
 
-      <View
-        style={[
-          styles.categoryContainer,
-          {
-            height: headerHeight / 2,
-          },
-        ]}
-      >
+      <View style={styles.categoryContainer}>
         <HorizontalTabs items={teste} />
       </View>
     </View>

@@ -1,12 +1,15 @@
 import { StyleSheet } from 'react-native';
 
 import { colors } from '../../global/styles/colors';
+import { fonts } from '../../global/styles/fonts';
 
 export const styles = StyleSheet.create({
   headerContainer: {
     width: '100%',
     zIndex: 2,
     backgroundColor: colors?.white,
+    borderBottomColor: colors?.lighterGray,
+    borderBottomWidth: 1,
   },
   contentContainer: {
     width: '100%',
@@ -20,13 +23,15 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   addressText: {
-    fontFamily: 'sulsans-medium',
+    fontFamily: fonts?.font?.medium,
     color: colors?.darkGray,
+    fontSize: fonts?.size?.medium,
   },
   dropdownIcon: {
     marginLeft: 4,
   },
   categoryContainer: {
     marginLeft: 12,
+    marginTop: 8,
   },
 });
