@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Pressable, FlatList, Text, View } from 'react-native';
 
 import { styles } from './styles';
@@ -26,22 +26,22 @@ const Tab = ({ item, handlePress, activeTab }: TabProps) => {
   );
 };
 
-type Item = {
+export type Item = {
   key: string;
   label: string;
 };
 
 type HorizontalTabsProps = {
   items: Item[];
+  handleChangeActiveTab: (key: string) => void;
+  activeTab: string;
 };
 
-const HorizontalTabs = ({ items }: HorizontalTabsProps) => {
-  const [activeTab, setActiveTab] = useState('');
-
-  const handleChangeActiveTab = (newActiveTab: string) => {
-    setActiveTab(newActiveTab);
-  };
-
+const HorizontalTabs = ({
+  items,
+  handleChangeActiveTab,
+  activeTab,
+}: HorizontalTabsProps) => {
   return (
     <FlatList
       horizontal

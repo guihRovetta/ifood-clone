@@ -2,25 +2,24 @@ import React from 'react';
 import { View, Text, Pressable } from 'react-native';
 
 import { ArrowDownIcon, QrCodeIcon } from '../../global/styles/icons';
-import HorizontalTabs from '../HorizontalTabs';
+import HorizontalTabs, { Item } from '../HorizontalTabs';
 import { styles } from './styles';
 
 type HeaderProps = {
   headerHeight: number;
+  handleChangeCategory: (category: string) => void;
+  category: string;
+  categoryList: Item[];
 };
 
-const teste = [
-  { key: 'restaurants1', label: 'Restaurantes' },
-  { key: 'restaurants2', label: 'Restaurantes' },
-  { key: 'restaurants3', label: 'Restaurantes' },
-  { key: 'restaurants4', label: 'Restaurantes' },
-  { key: 'restaurants5', label: 'Restaurantes' },
-  { key: 'restaurants6', label: 'Restaurantes' },
-  { key: 'restaurants7', label: 'Restaurantes' },
-  { key: 'restaurants8', label: 'Restaurantes' },
-];
+const Header = ({
+  headerHeight,
+  category,
+  handleChangeCategory,
+  categoryList,
+}: HeaderProps) => {
+  const address = 'Av. Paulista, 190';
 
-const Header = ({ headerHeight }: HeaderProps) => {
   return (
     <View style={styles.headerContainer}>
       <View
@@ -32,7 +31,7 @@ const Header = ({ headerHeight }: HeaderProps) => {
         ]}
       >
         <Pressable style={styles.dropdownContainer}>
-          <Text style={styles.addressText}>Av. Paulista, 190</Text>
+          <Text style={styles.addressText}>{address}</Text>
           <ArrowDownIcon style={styles.dropdownIcon} width={24} height={24} />
         </Pressable>
 
@@ -42,7 +41,11 @@ const Header = ({ headerHeight }: HeaderProps) => {
       </View>
 
       <View style={styles.categoryContainer}>
-        <HorizontalTabs items={teste} />
+        <HorizontalTabs
+          items={categoryList}
+          activeTab={category}
+          handleChangeActiveTab={handleChangeCategory}
+        />
       </View>
     </View>
   );
