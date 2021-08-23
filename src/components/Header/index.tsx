@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, Pressable } from 'react-native';
 
+import { colors } from '../../global/styles/colors';
 import { ArrowDownIcon, QrCodeIcon } from '../../global/styles/icons';
 import HorizontalTabs, { Item } from '../HorizontalTabs';
 import { styles } from './styles';
@@ -32,7 +33,12 @@ const Header = ({
       >
         <Pressable style={styles.dropdownContainer}>
           <Text style={styles.addressText}>{address}</Text>
-          <ArrowDownIcon style={styles.dropdownIcon} width={24} height={24} />
+          <ArrowDownIcon
+            style={styles.dropdownIcon}
+            width={24}
+            height={24}
+            fill={colors?.main}
+          />
         </Pressable>
 
         <Pressable>
