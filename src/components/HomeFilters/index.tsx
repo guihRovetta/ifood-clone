@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { ScrollView } from 'react-native';
 
-import { ArrowDownIcon } from '../../global/styles/icons';
+import { colors } from '../../global/styles/colors';
+import {
+  ArrowDownIcon,
+  FilterIcon,
+  PickupIcon,
+} from '../../global/styles/icons';
 import QuickFilter from '../QuickFilter';
 import { styles } from './styles';
 
@@ -29,14 +34,16 @@ const HomeFilters = () => {
     >
       <QuickFilter
         label="Ordenar"
-        rightIcon={<ArrowDownIcon width={24} height={24} />}
+        rightIcon={
+          <ArrowDownIcon width={24} height={24} fill={colors?.lightGray} />
+        }
         selected={activeFilters?.includes('orderBy')}
         onPress={() => handleChangeActiveFilters('orderBy')}
       />
 
       <QuickFilter
         label="Pra retirar"
-        leftIcon={<ArrowDownIcon width={24} height={24} />}
+        leftIcon={<PickupIcon width={16} height={61} />}
         selected={activeFilters?.includes('pickup')}
         onPress={() => handleChangeActiveFilters('pickup')}
       />
@@ -49,14 +56,18 @@ const HomeFilters = () => {
 
       <QuickFilter
         label="Vale-refeição"
-        rightIcon={<ArrowDownIcon width={24} height={24} />}
+        rightIcon={
+          <ArrowDownIcon width={24} height={24} fill={colors?.lightGray} />
+        }
         selected={activeFilters?.includes('mealTicket')}
         onPress={() => handleChangeActiveFilters('mealTicket')}
       />
 
       <QuickFilter
         label="Distância"
-        rightIcon={<ArrowDownIcon width={24} height={24} />}
+        rightIcon={
+          <ArrowDownIcon width={24} height={24} fill={colors?.lightGray} />
+        }
         selected={activeFilters?.includes('distance')}
         onPress={() => handleChangeActiveFilters('distance')}
       />
@@ -75,7 +86,7 @@ const HomeFilters = () => {
 
       <QuickFilter
         label="Filtros"
-        rightIcon={<ArrowDownIcon width={24} height={24} />}
+        rightIcon={<FilterIcon width={16} height={16} />}
         selected={activeFilters?.includes('filters')}
         onPress={() => handleChangeActiveFilters('filters')}
       />
