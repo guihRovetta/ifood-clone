@@ -2,6 +2,7 @@ import React from 'react';
 import { Text } from 'react-native';
 
 import { Item } from '../HorizontalTabs';
+import Restaurants from '../Restaurants';
 
 type SwitchCaseHomeProps = {
   category: string;
@@ -11,7 +12,7 @@ type SwitchCaseHomeProps = {
 const SwitchCaseHome = ({ category, categoryList }: SwitchCaseHomeProps) => {
   switch (category) {
     case categoryList[0]?.key:
-      return <Text>{categoryList[0]?.label}</Text>;
+      return <Restaurants />;
     case categoryList[1]?.key:
       return <Text>{categoryList[1]?.label}</Text>;
     case categoryList[2]?.key:
