@@ -13,6 +13,5 @@ export const styles = StyleSheet.create({
     right: 0,
     width: '100%',
     zIndex: 1,
-    elevation: 1,
   },
 });
