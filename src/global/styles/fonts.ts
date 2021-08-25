@@ -1,7 +1,7 @@
 export const fonts = {
   font: {
     bold: 'sulsans-bold',
-    boldItalic: 'bold-italic',
+    boldItalic: 'sulsans-bold-italic',
     light: 'sulsans-light',
     medium: 'sulsans-medium',
     regular: 'sulsans-regular',
