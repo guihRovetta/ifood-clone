@@ -1,16 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useRef, useState } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import Animated from 'react-native-reanimated';
 
 import Header from '../../components/Header';
 import HomeFilters from '../../components/HomeFilters';
 import SwitchCaseHome from '../../components/SwitchCaseHome';
 import { categoryList } from '../../data/categoryList';
+import { colors } from '../../global/styles/colors';
 import { styles } from './styles';
 
 const HEADER_HEIGHT = 48 * 2;
-const data = [...Array(70).keys()];
 
 const Home = () => {
   const [category, setCategory] = useState(categoryList[0]?.key);
@@ -55,7 +55,12 @@ const Home = () => {
       <Animated.View
         style={[
           styles.header,
-          { marginTop: HEADER_HEIGHT, transform: [{ translateY }] },
+          {
+            marginTop: HEADER_HEIGHT - 10,
+            paddingTop: 10,
+            backgroundColor: colors?.white,
+            transform: [{ translateY }],
+          },
         ]}
       >
         <HomeFilters />
@@ -66,13 +71,11 @@ const Home = () => {
         scrollEventThrottle={16}
         contentContainerStyle={{
           marginTop: HEADER_HEIGHT + 48,
+          paddingBottom: HEADER_HEIGHT + 48,
         }}
         onScroll={handleScroll}
       >
         <SwitchCaseHome category={category} categoryList={categoryList} />
-        {data?.map((item, index) => (
-          <Text key={index}>{item}</Text>
-        ))}
       </Animated.ScrollView>
     </View>
   );
