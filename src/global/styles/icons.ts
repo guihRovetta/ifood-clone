@@ -10,6 +10,7 @@ import ProfileOutlinedIcon from '../../assets/icons/profile-outlined.svg';
 import QrCodeIcon from '../../assets/icons/qr-code.svg';
 import SearchFilledIcon from '../../assets/icons/search-filled.svg';
 import SearchOutlinedIcon from '../../assets/icons/search-outlined.svg';
+import StarIcon from '../../assets/icons/star.svg';
 import SuperRestaurantIcon from '../../assets/icons/super-restaurant.svg';
 
 export {
@@ -26,4 +27,5 @@ export {
   SuperRestaurantIcon,
   FilterIcon,
   PickupIcon,
+  StarIcon,
 };
