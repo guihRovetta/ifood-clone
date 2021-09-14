@@ -1,6 +1,7 @@
 import AppLoading from 'expo-app-loading';
 import React, { useState } from 'react';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import 'react-native-gesture-handler';
 
 import { fetchFonts } from './src/global/config/LoadFonts';
 import Routes from './src/routes';
