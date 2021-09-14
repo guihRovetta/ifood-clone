@@ -1,15 +1,18 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import Banner01 from '../../assets/ultrawide-banners/1.jpeg';
-import Banner02 from '../../assets/ultrawide-banners/2.jpeg';
+import Banner01 from '../../assets/restaurants/banners/1.jpeg';
+import Banner02 from '../../assets/restaurants/banners/2.jpeg';
 import { categoryImageList } from '../../data/categoryImageList';
 import { favoritesStoresList } from '../../data/favoritesStoresList';
 import { ifoodFamousStoresList } from '../../data/ifoodFamousStoresList';
 import { lastStoresList } from '../../data/lastStoresList';
 import { restaurantsBannersList } from '../../data/restaurantsBannersList';
+import { restaurantsStoresList } from '../../data/restaurantsStoresList';
+import { secondCategoryImageList } from '../../data/secondCategoryImageList';
 import BannersList from '../BannersList';
 import CategoryImageList from '../CategoryImageList';
+import StoreItemList from '../StoreItemList';
 import StoreList from '../StoreList';
 import UltraWideBanner from '../UltraWideBanner';
 import { styles } from './styles';
@@ -35,7 +38,7 @@ const Restaurants = () => {
         style={styles.genericList}
       />
 
-      <View style={styles.genericBanner}>
+      <View style={styles.genericBannerWrapper}>
         <UltraWideBanner source={Banner01} />
       </View>
 
@@ -45,8 +48,16 @@ const Restaurants = () => {
         style={styles.genericList}
       />
 
-      <View style={styles.genericBanner}>
+      <View style={styles.genericBannerWrapper}>
         <UltraWideBanner source={Banner02} />
+      </View>
+
+      <View style={styles.categoryImageListWrapper}>
+        <CategoryImageList items={secondCategoryImageList} />
+      </View>
+
+      <View style={styles.storeItemListWrapper}>
+        <StoreItemList title="Lojas" items={restaurantsStoresList} />
       </View>
     </View>
   );
