@@ -88,9 +88,7 @@ const StoreItem = ({ storeInfo }: StoreItemProps) => {
 
           <View style={styles.storeSeparator} />
 
-          <Text style={styles.storeGenericText}>
-            {`R$ ${deliverFee?.toFixed(2)}`}
-          </Text>
+          <Text style={styles.storeGenericText}>{deliverFee}</Text>
         </View>
       </View>
     </View>
