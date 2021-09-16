@@ -20,7 +20,12 @@ export const generateStoreItemList = (storeInfo: StoreInfoType) => {
     category,
     distance,
     deliveryTime,
-    deliverFee,
+    deliverFee: deliverFee
+      ? new Intl.NumberFormat('pt-BR', {
+          style: 'currency',
+          currency: 'BRL',
+        }).format(deliverFee)
+      : '',
     isSuperRestaurant,
     freeDelivery,
   };
