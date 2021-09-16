@@ -12,7 +12,7 @@ export type StoreInfoType = {
   category: string;
   distance: number;
   deliveryTime: number[];
-  deliverFee?: number;
+  deliverFee?: string;
   isSuperRestaurant?: boolean;
   freeDelivery?: boolean;
 };
