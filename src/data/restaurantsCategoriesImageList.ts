@@ -17,7 +17,7 @@ import VegetarianImg from '../assets/restaurants/categories/Vegetariana-out_20.j
 import { generateItemImageList } from '../utils/generateItemImageList';
 import { categoryDictionary } from './categoryDictionary';
 
-export const categoryImageList = [
+export const restaurantsCategoriesImageList = [
   generateItemImageList(MarketImg, categoryDictionary?.market?.label),
   generateItemImageList(BrazilianImg, categoryDictionary?.brazilian?.label),
   generateItemImageList(FastFoodImg, categoryDictionary?.fastFood?.label),

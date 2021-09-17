@@ -3,13 +3,13 @@ import { View } from 'react-native';
 
 import Banner01 from '../../assets/restaurants/banners/1.jpeg';
 import Banner02 from '../../assets/restaurants/banners/2.jpeg';
-import { categoryImageList } from '../../data/categoryImageList';
 import { favoritesStoresList } from '../../data/favoritesStoresList';
 import { ifoodFamousStoresList } from '../../data/ifoodFamousStoresList';
 import { lastStoresList } from '../../data/lastStoresList';
+import { marketCategoriesImageList } from '../../data/marketCategoriesImageList';
 import { restaurantsBannersList } from '../../data/restaurantsBannersList';
+import { restaurantsCategoriesImageList } from '../../data/restaurantsCategoriesImageList';
 import { restaurantsStoresList } from '../../data/restaurantsStoresList';
-import { secondCategoryImageList } from '../../data/secondCategoryImageList';
 import BannersList from '../BannersList';
 import CategoryImageList from '../CategoryImageList';
 import StoreItemList from '../StoreItemList';
@@ -20,7 +20,7 @@ import { styles } from './styles';
 const Restaurants = () => {
   return (
     <View>
-      <CategoryImageList items={categoryImageList} />
+      <CategoryImageList items={restaurantsCategoriesImageList} />
 
       <BannersList items={restaurantsBannersList} />
 
@@ -53,7 +53,7 @@ const Restaurants = () => {
       </View>
 
       <View style={styles.categoryImageListWrapper}>
-        <CategoryImageList items={secondCategoryImageList} />
+        <CategoryImageList items={marketCategoriesImageList} />
       </View>
 
       <View style={styles.storeItemListWrapper}>
