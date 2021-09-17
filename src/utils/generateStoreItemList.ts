@@ -1,6 +1,10 @@
 import { StoreInfoType } from '../components/StoreItem';
 
-export const generateStoreItemList = (storeInfo: StoreInfoType) => {
+type GenerateStoreInfoType = Omit<StoreInfoType, 'deliverFee'> & {
+  deliverFee?: number;
+};
+
+export const generateStoreItemList = (storeInfo: GenerateStoreInfoType) => {
   const {
     name,
     rating,
