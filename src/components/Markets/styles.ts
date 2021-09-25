@@ -8,4 +8,15 @@ export const styles = StyleSheet.create({
   genericBannerWrapper: {
     marginTop: 32,
   },
+  horizontalStoreListWrapper: {
+    paddingLeft: 12,
+    marginTop: 32,
+  },
+  secondHorizontalStoreListWrapper: {
+    marginTop: 16,
+  },
+  storeItemListWrapper: {
+    paddingHorizontal: 12,
+    marginTop: 16,
+  },
 });
