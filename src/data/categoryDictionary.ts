@@ -16,4 +16,5 @@ export const categoryDictionary = {
   iceCream: { label: 'Sorvetes' },
   vegetarian: { label: 'Vegetariana' },
   italian: { label: 'Italiana' },
+  drinks: { label: 'Bebidas' },
 };
