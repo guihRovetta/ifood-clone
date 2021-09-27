@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
   },
   storeListShowMoreButtonText: {
     fontFamily: fonts?.font?.regular,
-    fontSize: fonts?.size?.medium,
+    fontSize: fonts?.size?.small,
     color: colors?.main,
   },
   storeListSeparatorComponent: {
