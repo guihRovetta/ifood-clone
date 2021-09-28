@@ -1,4 +1,6 @@
 import ArrowDownIcon from '../../assets/icons/arrow-down.svg';
+import CouponIcon from '../../assets/icons/coupon.svg';
+import DeliveryFeeIcon from '../../assets/icons/delivery-fee.svg';
 import FilterIcon from '../../assets/icons/filter.svg';
 import HomeFilledIcon from '../../assets/icons/home-filled.svg';
 import HomeOutlinedIcon from '../../assets/icons/home-outlined.svg';
@@ -28,4 +30,6 @@ export {
   FilterIcon,
   PickupIcon,
   StarIcon,
+  CouponIcon,
+  DeliveryFeeIcon,
 };
