@@ -6,4 +6,5 @@ export const categoryList = [
   generateItemList('drinks', 'Bebidas'),
   generateItemList('drugstore', 'Farmácias'),
   generateItemList('pets', 'Pets'),
+  generateItemList('express', 'Express'),
 ];
