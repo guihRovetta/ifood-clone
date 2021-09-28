@@ -2,7 +2,12 @@ import React from 'react';
 import { ImageSourcePropType, View, Image, Text } from 'react-native';
 
 import { colors } from '../../global/styles/colors';
-import { SuperRestaurantIcon, StarIcon } from '../../global/styles/icons';
+import {
+  SuperRestaurantIcon,
+  StarIcon,
+  DeliveryFeeIcon,
+  CouponIcon,
+} from '../../global/styles/icons';
 import { styles } from './styles';
 
 export type StoreInfoType = {
@@ -15,6 +20,8 @@ export type StoreInfoType = {
   deliverFee?: string;
   isSuperRestaurant?: boolean;
   freeDelivery?: boolean;
+  freeDeliveryAvailable?: boolean;
+  coupon?: string;
 };
 
 type StoreItemProps = {
@@ -32,6 +39,8 @@ const StoreItem = ({ storeInfo }: StoreItemProps) => {
     deliverFee,
     isSuperRestaurant,
     freeDelivery,
+    freeDeliveryAvailable,
+    coupon,
   } = storeInfo || {};
 
   const [deliveryTimeMin, deliveryTimeMax] = deliveryTime;
@@ -90,6 +99,28 @@ const StoreItem = ({ storeInfo }: StoreItemProps) => {
 
           <Text style={styles.storeGenericText}>{deliverFee}</Text>
         </View>
+
+        {(coupon || freeDeliveryAvailable) && (
+          <View style={styles.storeBenefictsContainer}>
+            {coupon ? (
+              <View style={styles.storeBenefictsWrapper}>
+                <CouponIcon width={10} height={10} fill={colors?.blue} />
+                <Text
+                  style={styles.storeBenefictsText}
+                >{`Cupom de ${coupon} disponível`}</Text>
+              </View>
+            ) : freeDeliveryAvailable ? (
+              <View style={styles.storeBenefictsWrapper}>
+                <DeliveryFeeIcon width={10} height={10} fill={colors?.blue} />
+                <Text style={styles.storeBenefictsText}>
+                  Entrega grátis disponível
+                </Text>
+              </View>
+            ) : (
+              <></>
+            )}
+          </View>
+        )}
       </View>
     </View>
   );
