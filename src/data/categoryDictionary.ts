@@ -17,4 +17,5 @@ export const categoryDictionary = {
   vegetarian: { label: 'Vegetariana' },
   italian: { label: 'Italiana' },
   drinks: { label: 'Bebidas' },
+  convenience: { label: 'Conveniência' },
 };
