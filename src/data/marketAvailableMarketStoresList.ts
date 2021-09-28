@@ -7,6 +7,7 @@ import Store15 from '../assets/market/stores/15.jpg';
 import Store16 from '../assets/market/stores/16.jpeg';
 import Store09 from '../assets/market/stores/9.png';
 import { generateMinAndMaxTime } from '../utils/generateMinAndMaxTime';
+import { generateRandomCoupon } from '../utils/generateRandomCoupon';
 import { generateRamdomNumber } from '../utils/generateRandomNumber';
 import { generateStoreItemList } from '../utils/generateStoreItemList';
 import { categoryDictionary } from './categoryDictionary';
@@ -20,6 +21,7 @@ export const marketAvailableMarketStoresList = [
     distance: generateRamdomNumber(0, 12),
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
+    freeDeliveryAvailable: true,
   }),
   generateStoreItemList({
     source: Store10,
@@ -29,6 +31,7 @@ export const marketAvailableMarketStoresList = [
     distance: generateRamdomNumber(0, 12),
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
+    freeDeliveryAvailable: true,
   }),
   generateStoreItemList({
     source: Store11,
@@ -47,6 +50,7 @@ export const marketAvailableMarketStoresList = [
     distance: generateRamdomNumber(0, 12),
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
+    coupon: generateRandomCoupon(),
   }),
   generateStoreItemList({
     source: Store13,
@@ -65,6 +69,7 @@ export const marketAvailableMarketStoresList = [
     distance: generateRamdomNumber(0, 12),
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
+    coupon: generateRandomCoupon(),
   }),
   generateStoreItemList({
     source: Store15,
@@ -74,6 +79,7 @@ export const marketAvailableMarketStoresList = [
     distance: generateRamdomNumber(0, 12),
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
+    coupon: generateRandomCoupon(),
   }),
   generateStoreItemList({
     source: Store16,

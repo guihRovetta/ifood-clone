@@ -5,6 +5,7 @@ import Store06 from '../assets/express/stores/6.jpg';
 import Store07 from '../assets/express/stores/7.jpg';
 import Store08 from '../assets/express/stores/8.jpeg';
 import { generateMinAndMaxTime } from '../utils/generateMinAndMaxTime';
+import { generateRandomCoupon } from '../utils/generateRandomCoupon';
 import { generateRamdomNumber } from '../utils/generateRandomNumber';
 import { generateStoreItemList } from '../utils/generateStoreItemList';
 import { categoryDictionary } from './categoryDictionary';
@@ -27,6 +28,7 @@ export const express30minStoresList = [
     distance: generateRamdomNumber(4, 10),
     deliveryTime: generateMinAndMaxTime(5, 30),
     deliverFee: generateRamdomNumber(4, 12, true) + 0.9,
+    coupon: generateRandomCoupon(),
   }),
   generateStoreItemList({
     source: Store05,
@@ -45,6 +47,7 @@ export const express30minStoresList = [
     distance: generateRamdomNumber(4, 10),
     deliveryTime: generateMinAndMaxTime(5, 30),
     deliverFee: generateRamdomNumber(4, 12, true) + 0.9,
+    freeDeliveryAvailable: true,
   }),
   generateStoreItemList({
     source: Store07,

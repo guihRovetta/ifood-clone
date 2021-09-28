@@ -15,6 +15,7 @@ import Store07 from '../assets/drinks/stores/7.jpeg';
 import Store08 from '../assets/drinks/stores/8.jpg';
 import Store09 from '../assets/drinks/stores/9.png';
 import { generateMinAndMaxTime } from '../utils/generateMinAndMaxTime';
+import { generateRandomCoupon } from '../utils/generateRandomCoupon';
 import { generateStoreItemList } from '../utils/generateStoreItemList';
 import { generateRamdomNumber } from './../utils/generateRandomNumber';
 import { categoryDictionary } from './categoryDictionary';
@@ -38,6 +39,7 @@ export const drinksMostRequestedStoresList = [
     distance: generateRamdomNumber(2, 8),
     deliveryTime: generateMinAndMaxTime(20, 100),
     deliverFee: generateRamdomNumber(3, 12, true) + 0.9,
+    coupon: generateRandomCoupon(),
   }),
   generateStoreItemList({
     source: Store03,
@@ -75,6 +77,7 @@ export const drinksMostRequestedStoresList = [
     distance: generateRamdomNumber(2, 8),
     deliveryTime: generateMinAndMaxTime(20, 100),
     deliverFee: generateRamdomNumber(3, 12, true) + 0.9,
+    coupon: generateRandomCoupon(),
   }),
   generateStoreItemList({
     source: Store07,
@@ -103,6 +106,7 @@ export const drinksMostRequestedStoresList = [
     distance: generateRamdomNumber(2, 8),
     deliveryTime: generateMinAndMaxTime(20, 100),
     deliverFee: generateRamdomNumber(3, 12, true) + 0.9,
+    coupon: generateRandomCoupon(),
   }),
   generateStoreItemList({
     source: Store10,
@@ -111,6 +115,7 @@ export const drinksMostRequestedStoresList = [
     category: categoryDictionary?.drinks?.label,
     distance: generateRamdomNumber(2, 8),
     deliveryTime: generateMinAndMaxTime(20, 100),
+    coupon: generateRandomCoupon(),
   }),
   generateStoreItemList({
     source: Store11,
@@ -159,6 +164,7 @@ export const drinksMostRequestedStoresList = [
     deliveryTime: generateMinAndMaxTime(20, 100),
     deliverFee: generateRamdomNumber(3, 12, true) + 0.9,
     isSuperRestaurant: true,
+    coupon: generateRandomCoupon(),
   }),
   generateStoreItemList({
     source: Store16,

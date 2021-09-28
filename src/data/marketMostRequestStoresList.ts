@@ -7,6 +7,7 @@ import Store06 from '../assets/market/stores/6.png';
 import Store07 from '../assets/market/stores/7.png';
 import Store08 from '../assets/market/stores/8.png';
 import { generateMinAndMaxTime } from '../utils/generateMinAndMaxTime';
+import { generateRandomCoupon } from '../utils/generateRandomCoupon';
 import { generateRamdomNumber } from '../utils/generateRandomNumber';
 import { generateStoreItemList } from '../utils/generateStoreItemList';
 import { categoryDictionary } from './categoryDictionary';
@@ -20,6 +21,7 @@ export const marketMostRequestStoresList = [
     distance: generateRamdomNumber(0, 12),
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
+    coupon: generateRandomCoupon(),
   }),
   generateStoreItemList({
     source: Store02,
@@ -29,6 +31,7 @@ export const marketMostRequestStoresList = [
     distance: generateRamdomNumber(0, 12),
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
+    freeDeliveryAvailable: true,
   }),
   generateStoreItemList({
     source: Store03,
@@ -56,6 +59,7 @@ export const marketMostRequestStoresList = [
     distance: generateRamdomNumber(0, 12),
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
+    coupon: generateRandomCoupon(),
   }),
   generateStoreItemList({
     source: Store06,

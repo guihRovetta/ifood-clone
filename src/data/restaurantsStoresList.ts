@@ -15,6 +15,7 @@ import Store07 from '../assets/restaurants/stores/7.jpg';
 import Store08 from '../assets/restaurants/stores/8.png';
 import Store09 from '../assets/restaurants/stores/9.jpg';
 import { generateMinAndMaxTime } from '../utils/generateMinAndMaxTime';
+import { generateRandomCoupon } from '../utils/generateRandomCoupon';
 import { generateStoreItemList } from '../utils/generateStoreItemList';
 import { generateRamdomNumber } from './../utils/generateRandomNumber';
 import { categoryDictionary } from './categoryDictionary';
@@ -38,6 +39,7 @@ export const restaurantsStoresList = [
     distance: generateRamdomNumber(0, 12),
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
+    coupon: generateRandomCoupon(),
   }),
   generateStoreItemList({
     source: Store03,
@@ -66,6 +68,7 @@ export const restaurantsStoresList = [
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
     isSuperRestaurant: true,
+    coupon: generateRandomCoupon(),
   }),
   generateStoreItemList({
     source: Store06,
@@ -75,6 +78,7 @@ export const restaurantsStoresList = [
     distance: generateRamdomNumber(0, 12),
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
+    coupon: generateRandomCoupon(),
   }),
   generateStoreItemList({
     source: Store07,
@@ -120,6 +124,7 @@ export const restaurantsStoresList = [
     distance: generateRamdomNumber(0, 12),
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
+    coupon: generateRandomCoupon(),
   }),
   generateStoreItemList({
     source: Store12,
@@ -159,6 +164,7 @@ export const restaurantsStoresList = [
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
     isSuperRestaurant: true,
+    coupon: generateRandomCoupon(),
   }),
   generateStoreItemList({
     source: Store16,
