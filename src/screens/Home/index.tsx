@@ -4,7 +4,7 @@ import { View } from 'react-native';
 import Animated from 'react-native-reanimated';
 
 import Header from '../../components/Header';
-import HomeFilters from '../../components/HomeFilters';
+import RestaurantFilters from '../../components/RestaurantFilters';
 import SwitchCaseHome from '../../components/SwitchCaseHome';
 import { categoryList } from '../../data/categoryList';
 import { colors } from '../../global/styles/colors';
@@ -65,7 +65,7 @@ const Home = () => {
             },
           ]}
         >
-          <HomeFilters />
+          <RestaurantFilters />
         </Animated.View>
       )}
 

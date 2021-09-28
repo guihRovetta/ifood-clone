@@ -10,7 +10,7 @@ import {
 import QuickFilter from '../QuickFilter';
 import { styles } from './styles';
 
-const HomeFilters = () => {
+const RestaurantFilters = () => {
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
   const handleChangeActiveFilters = (filterKey: string) => {
@@ -124,4 +124,4 @@ const HomeFilters = () => {
   );
 };
 
-export default HomeFilters;
+export default RestaurantFilters;
