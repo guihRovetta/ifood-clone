@@ -11,6 +11,7 @@ type HeaderProps = {
   handleChangeCategory: (category: string) => void;
   category: string;
   categoryList: Item[];
+  address: string;
 };
 
 const Header = ({
@@ -18,9 +19,8 @@ const Header = ({
   category,
   handleChangeCategory,
   categoryList,
+  address,
 }: HeaderProps) => {
-  const address = 'Av. Paulista, 190';
-
   return (
     <View style={styles.headerContainer}>
       <View
