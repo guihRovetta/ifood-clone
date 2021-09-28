@@ -49,29 +49,38 @@ const Home = () => {
           categoryList={categoryList}
           category={category}
           handleChangeCategory={handleChangeCategory}
+          address="Av. São João, 2200"
         />
       </Animated.View>
 
-      <Animated.View
-        style={[
-          styles.header,
-          {
-            marginTop: HEADER_HEIGHT - 10,
-            paddingTop: 10,
-            backgroundColor: colors?.white,
-            transform: [{ translateY }],
-          },
-        ]}
-      >
-        <HomeFilters />
-      </Animated.View>
+      {category === categoryList[0]?.key && (
+        <Animated.View
+          style={[
+            styles.header,
+            {
+              marginTop: HEADER_HEIGHT - 10,
+              paddingTop: 15,
+              backgroundColor: colors?.white,
+              transform: [{ translateY }],
+            },
+          ]}
+        >
+          <HomeFilters />
+        </Animated.View>
+      )}
 
       <Animated.ScrollView
         bounces={false}
         scrollEventThrottle={16}
         contentContainerStyle={{
-          marginTop: HEADER_HEIGHT + 48,
-          paddingBottom: HEADER_HEIGHT + 48,
+          marginTop:
+            category === categoryList[0]?.key
+              ? HEADER_HEIGHT + 48
+              : HEADER_HEIGHT,
+          paddingBottom:
+            category === categoryList[0]?.key
+              ? HEADER_HEIGHT + 48
+              : HEADER_HEIGHT,
         }}
         onScroll={handleScroll}
       >
