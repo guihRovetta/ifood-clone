@@ -26,6 +26,10 @@ const HomeFilters = () => {
     setActiveFilters(newActiveFilters);
   };
 
+  const isActiveFilter = (inputFilter: string) => {
+    return activeFilters?.includes(inputFilter);
+  };
+
   return (
     <ScrollView
       horizontal
@@ -35,59 +39,85 @@ const HomeFilters = () => {
       <QuickFilter
         label="Ordenar"
         rightIcon={
-          <ArrowDownIcon width={24} height={24} fill={colors?.lightGray} />
+          <ArrowDownIcon
+            width={24}
+            height={24}
+            fill={isActiveFilter('orderBy') ? colors?.main : colors?.lightGray}
+          />
         }
-        selected={activeFilters?.includes('orderBy')}
+        selected={isActiveFilter('orderBy')}
         onPress={() => handleChangeActiveFilters('orderBy')}
       />
 
       <QuickFilter
         label="Pra retirar"
-        leftIcon={<PickupIcon width={16} height={61} />}
-        selected={activeFilters?.includes('pickup')}
+        leftIcon={
+          <PickupIcon
+            width={16}
+            height={61}
+            fill={isActiveFilter('pickup') ? colors?.main : colors?.lightGray}
+          />
+        }
+        selected={isActiveFilter('pickup')}
         onPress={() => handleChangeActiveFilters('pickup')}
       />
 
       <QuickFilter
         label="Entrega grátis"
-        selected={activeFilters?.includes('freeDelivery')}
+        selected={isActiveFilter('freeDelivery')}
         onPress={() => handleChangeActiveFilters('freeDelivery')}
       />
 
       <QuickFilter
         label="Vale-refeição"
         rightIcon={
-          <ArrowDownIcon width={24} height={24} fill={colors?.lightGray} />
+          <ArrowDownIcon
+            width={24}
+            height={24}
+            fill={
+              isActiveFilter('mealTicket') ? colors?.main : colors?.lightGray
+            }
+          />
         }
-        selected={activeFilters?.includes('mealTicket')}
+        selected={isActiveFilter('mealTicket')}
         onPress={() => handleChangeActiveFilters('mealTicket')}
       />
 
       <QuickFilter
         label="Distância"
         rightIcon={
-          <ArrowDownIcon width={24} height={24} fill={colors?.lightGray} />
+          <ArrowDownIcon
+            width={24}
+            height={24}
+            fill={isActiveFilter('distance') ? colors?.main : colors?.lightGray}
+          />
         }
-        selected={activeFilters?.includes('distance')}
+        selected={isActiveFilter('distance')}
         onPress={() => handleChangeActiveFilters('distance')}
       />
 
       <QuickFilter
         label="Entrega Parceira"
-        selected={activeFilters?.includes('partnerDelivery')}
+        selected={isActiveFilter('partnerDelivery')}
         onPress={() => handleChangeActiveFilters('partnerDelivery')}
       />
 
       <QuickFilter
         label="Super Restaturantes"
-        selected={activeFilters?.includes('superRestaurants')}
+        selected={isActiveFilter('superRestaurants')}
         onPress={() => handleChangeActiveFilters('superRestaurants')}
       />
 
       <QuickFilter
         label="Filtros"
-        rightIcon={<FilterIcon width={16} height={16} />}
-        selected={activeFilters?.includes('filters')}
+        rightIcon={
+          <FilterIcon
+            width={16}
+            height={16}
+            fill={isActiveFilter('filters') ? colors?.main : colors?.lightGray}
+          />
+        }
+        selected={isActiveFilter('filters')}
         onPress={() => handleChangeActiveFilters('filters')}
       />
     </ScrollView>
