@@ -1,7 +1,8 @@
 import { StoreInfoType } from '../components/StoreItem';
 
-type GenerateStoreInfoType = Omit<StoreInfoType, 'deliverFee'> & {
+type GenerateStoreInfoType = Omit<StoreInfoType, 'deliverFee' | 'coupon'> & {
   deliverFee?: number;
+  coupon?: number;
 };
 
 export const generateStoreItemList = (storeInfo: GenerateStoreInfoType) => {
@@ -15,6 +16,8 @@ export const generateStoreItemList = (storeInfo: GenerateStoreInfoType) => {
     deliverFee,
     isSuperRestaurant,
     freeDelivery,
+    freeDeliveryAvailable,
+    coupon,
   } = storeInfo || {};
 
   return {
@@ -32,5 +35,13 @@ export const generateStoreItemList = (storeInfo: GenerateStoreInfoType) => {
       : '',
     isSuperRestaurant,
     freeDelivery,
+    freeDeliveryAvailable,
+    coupon: coupon
+      ? new Intl.NumberFormat('pt-BR', {
+          style: 'currency',
+          currency: 'BRL',
+          minimumFractionDigits: 0,
+        }).format(coupon)
+      : '',
   };
 };
