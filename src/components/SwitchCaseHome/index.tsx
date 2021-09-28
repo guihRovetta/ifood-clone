@@ -5,6 +5,7 @@ import Drinks from '../Drinks';
 import Drugstores from '../Drugstores';
 import { Item } from '../HorizontalTabs';
 import Markets from '../Markets';
+import Pets from '../Pets';
 import Restaurants from '../Restaurants';
 
 type SwitchCaseHomeProps = {
@@ -23,7 +24,7 @@ const SwitchCaseHome = ({ category, categoryList }: SwitchCaseHomeProps) => {
     case categoryList[3]?.key:
       return <Drugstores />;
     case categoryList[4]?.key:
-      return <Text>{categoryList[4]?.label}</Text>;
+      return <Pets />;
     default:
       return <Text>{categoryList[5]?.label}</Text>;
   }
