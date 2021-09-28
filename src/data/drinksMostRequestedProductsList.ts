@@ -21,7 +21,7 @@ export const drinksMostRequestedProductsList = [
     name: 'Coca-Cola Lata 350ml',
     deliveryTime: generateMinAndMaxTime(20, 60),
     deliverFee: generateRamdomNumber(4, 12, true) + 0.9,
-    price: generateRamdomNumber(2, 5, true) + 0.9,
+    price: generateRamdomNumber(2, 5),
     store: {
       source: Store01,
     },
@@ -31,7 +31,7 @@ export const drinksMostRequestedProductsList = [
     name: 'Coca-Cola Zero Lata 350ml',
     deliveryTime: generateMinAndMaxTime(20, 60),
     deliverFee: generateRamdomNumber(4, 12, true) + 0.9,
-    price: generateRamdomNumber(3, 6, true) + 0.9,
+    price: generateRamdomNumber(3, 6),
     store: {
       source: Store01,
     },
@@ -41,7 +41,7 @@ export const drinksMostRequestedProductsList = [
     name: 'Cerveja Skol Lata 350ml',
     deliveryTime: generateMinAndMaxTime(20, 60),
     deliverFee: generateRamdomNumber(4, 12, true) + 0.9,
-    price: generateRamdomNumber(2, 3, true) + 0.9,
+    price: generateRamdomNumber(2, 3),
     store: {
       source: Store01,
     },
@@ -51,7 +51,7 @@ export const drinksMostRequestedProductsList = [
     name: 'Cerveja Petra Lata 350ml',
     deliveryTime: generateMinAndMaxTime(20, 60),
     deliverFee: generateRamdomNumber(4, 12, true) + 0.9,
-    price: generateRamdomNumber(2, 3, true) + 0.9,
+    price: generateRamdomNumber(2, 3),
     store: {
       source: Store02,
     },
@@ -61,7 +61,7 @@ export const drinksMostRequestedProductsList = [
     name: 'Cerveja Budweiser Garrafa',
     deliveryTime: generateMinAndMaxTime(20, 60),
     deliverFee: generateRamdomNumber(4, 12, true) + 0.9,
-    price: generateRamdomNumber(4, 5, true) + 0.9,
+    price: generateRamdomNumber(4, 5),
     store: {
       source: Store02,
     },
@@ -72,7 +72,7 @@ export const drinksMostRequestedProductsList = [
     name: 'Coca-Cola 2l',
     deliveryTime: generateMinAndMaxTime(20, 60),
     deliverFee: generateRamdomNumber(4, 12, true) + 0.9,
-    price: generateRamdomNumber(10, 13, true) + 0.9,
+    price: generateRamdomNumber(10, 13),
     store: {
       source: Store02,
     },
@@ -83,7 +83,7 @@ export const drinksMostRequestedProductsList = [
     name: 'Suco de Laranja',
     deliveryTime: generateMinAndMaxTime(20, 60),
     deliverFee: generateRamdomNumber(4, 12, true) + 0.9,
-    price: generateRamdomNumber(5, 7, true) + 0.9,
+    price: generateRamdomNumber(5, 7),
     store: {
       source: Store03,
     },
@@ -93,7 +93,7 @@ export const drinksMostRequestedProductsList = [
     name: 'Água Crystal sem gás - 500ml',
     deliveryTime: generateMinAndMaxTime(20, 60),
     deliverFee: generateRamdomNumber(4, 12, true) + 0.9,
-    price: generateRamdomNumber(3, 5, true) + 0.9,
+    price: generateRamdomNumber(3, 5),
     store: {
       source: Store03,
     },
@@ -103,7 +103,7 @@ export const drinksMostRequestedProductsList = [
     name: 'Cerveja Artesanal Dunkel',
     deliveryTime: generateMinAndMaxTime(20, 60),
     deliverFee: generateRamdomNumber(4, 12, true) + 0.9,
-    price: generateRamdomNumber(15, 20, true) + 0.9,
+    price: generateRamdomNumber(15, 20),
     store: {
       source: Store03,
     },
@@ -113,7 +113,7 @@ export const drinksMostRequestedProductsList = [
     name: 'Cerveja Artesanal Weiss',
     deliveryTime: generateMinAndMaxTime(20, 60),
     deliverFee: generateRamdomNumber(4, 12, true) + 0.9,
-    price: generateRamdomNumber(18, 25, true) + 0.9,
+    price: generateRamdomNumber(18, 25),
     store: {
       source: Store03,
     },
