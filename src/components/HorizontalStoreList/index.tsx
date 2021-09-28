@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Pressable } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
 import StoreItem, { StoreInfoType } from '../StoreItem';
@@ -10,6 +10,7 @@ type HorizontalStoreListProps = {
   subtitle?: string;
   firstLineItems: StoreInfoType[];
   secondLineItems?: StoreInfoType[];
+  showMoreButton?: boolean;
 };
 
 const HorizontalStoreList = ({
@@ -17,11 +18,26 @@ const HorizontalStoreList = ({
   subtitle,
   firstLineItems,
   secondLineItems = [],
+  showMoreButton = false,
 }: HorizontalStoreListProps) => {
   return (
     <View>
-      <Text style={styles.horizontalStoreListTitle}>{title}</Text>
-      <Text style={styles.horizontalStoreListSubtitle}>{subtitle}</Text>
+      <View style={styles.horizontalStoreListHeaderWrapper}>
+        <View style={styles.horizontalStoreListFirstLineWrapper}>
+          <Text style={styles.horizontalStoreListTitle}>{title}</Text>
+          {showMoreButton && (
+            <Pressable>
+              <Text style={styles.horizontalStoreListShowMoreButtonText}>
+                Ver mais
+              </Text>
+            </Pressable>
+          )}
+        </View>
+        {subtitle && (
+          <Text style={styles.horizontalStoreListSubtitle}>{subtitle}</Text>
+        )}
+      </View>
+
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
