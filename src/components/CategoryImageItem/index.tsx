@@ -4,8 +4,6 @@ import {
   Text,
   Image,
   ImageSourcePropType,
-  StyleProp,
-  ViewStyle,
   Pressable,
 } from 'react-native';
 
@@ -14,16 +12,11 @@ import { styles } from './styles';
 type CategoryImageItemProps = {
   imageUrl: ImageSourcePropType;
   label: string;
-  style?: StyleProp<ViewStyle>;
 };
 
-const CategoryImageItem = ({
-  imageUrl,
-  label,
-  style,
-}: CategoryImageItemProps) => {
+const CategoryImageItem = ({ imageUrl, label }: CategoryImageItemProps) => {
   return (
-    <View style={style}>
+    <View>
       <Pressable style={styles.categoryContainer}>
         <Image
           source={imageUrl}
