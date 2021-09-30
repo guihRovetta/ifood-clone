@@ -5,7 +5,12 @@ import { colors } from '../../global/styles/colors';
 export const styles = StyleSheet.create({
   homeFilterListContainer: {
     backgroundColor: colors?.white,
-    paddingHorizontal: 12,
     paddingBottom: 12,
+  },
+  homeFilterListContentContainer: {
+    paddingHorizontal: 12,
+  },
+  restaurantFiltersQuickFilterWrapper: {
+    marginRight: 10,
   },
 });
