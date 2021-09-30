@@ -1,8 +1,15 @@
 import { StoreInfoType } from '../components/StoreItem';
 
-type GenerateStoreInfoType = Omit<StoreInfoType, 'deliverFee' | 'coupon'> & {
+type GenerateStoreInfoType = Omit<
+  StoreInfoType,
+  'deliverFee' | 'coupon' | 'recurrence'
+> & {
   deliverFee?: number;
   coupon?: number;
+  recurrence?: {
+    numberOfTimes: number;
+    discountValue: number;
+  };
 };
 
 export const generateStoreItemList = (storeInfo: GenerateStoreInfoType) => {
@@ -19,6 +26,7 @@ export const generateStoreItemList = (storeInfo: GenerateStoreInfoType) => {
     freeDeliveryAvailable,
     coupon,
     isFavorite,
+    recurrence,
   } = storeInfo || {};
 
   return {
@@ -45,5 +53,15 @@ export const generateStoreItemList = (storeInfo: GenerateStoreInfoType) => {
         }).format(coupon)
       : '',
     isFavorite,
+    recurrence: {
+      numberOfTimes: recurrence?.numberOfTimes,
+      discountValue: recurrence?.discountValue
+        ? new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
+            minimumFractionDigits: 0,
+          }).format(recurrence?.discountValue)
+        : '',
+    },
   };
 };
