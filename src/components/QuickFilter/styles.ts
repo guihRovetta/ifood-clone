@@ -15,7 +15,6 @@ export const styles = StyleSheet.create({
     paddingVertical: 4,
     maxHeight: 32,
     height: '100%',
-    marginRight: 10,
   },
   filterContainerActive: {
     backgroundColor: colors?.lightMain,
