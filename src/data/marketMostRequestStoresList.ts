@@ -22,6 +22,7 @@ export const marketMostRequestStoresList = [
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
     coupon: generateRandomCoupon(),
+    isFavorite: true,
   }),
   generateStoreItemList({
     source: Store02,
@@ -69,6 +70,7 @@ export const marketMostRequestStoresList = [
     distance: generateRamdomNumber(0, 12),
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
+    isFavorite: true,
   }),
   generateStoreItemList({
     source: Store07,
@@ -78,6 +80,7 @@ export const marketMostRequestStoresList = [
     distance: generateRamdomNumber(0, 12),
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
+    isFavorite: true,
   }),
   generateStoreItemList({
     source: Store08,

@@ -30,6 +30,7 @@ export const restaurantsStoresList = [
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
     isSuperRestaurant: true,
+    isFavorite: true,
   }),
   generateStoreItemList({
     source: Store02,
@@ -58,6 +59,7 @@ export const restaurantsStoresList = [
     distance: generateRamdomNumber(0, 12),
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
+    isFavorite: true,
   }),
   generateStoreItemList({
     source: Store05,
@@ -107,6 +109,7 @@ export const restaurantsStoresList = [
     distance: generateRamdomNumber(0, 12),
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
+    isFavorite: true,
   }),
   generateStoreItemList({
     source: Store10,
@@ -115,6 +118,7 @@ export const restaurantsStoresList = [
     category: categoryDictionary?.brazilian?.label,
     distance: generateRamdomNumber(0, 12),
     deliveryTime: generateMinAndMaxTime(20, 120),
+    deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
   }),
   generateStoreItemList({
     source: Store11,
@@ -145,6 +149,7 @@ export const restaurantsStoresList = [
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
     isSuperRestaurant: true,
+    isFavorite: true,
   }),
   generateStoreItemList({
     source: Store14,
@@ -174,5 +179,6 @@ export const restaurantsStoresList = [
     distance: generateRamdomNumber(0, 12),
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
+    isFavorite: true,
   }),
 ];

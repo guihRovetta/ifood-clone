@@ -29,6 +29,7 @@ export const express30minStoresList = [
     deliveryTime: generateMinAndMaxTime(5, 30),
     deliverFee: generateRamdomNumber(4, 12, true) + 0.9,
     coupon: generateRandomCoupon(),
+    isFavorite: true,
   }),
   generateStoreItemList({
     source: Store05,
@@ -48,6 +49,7 @@ export const express30minStoresList = [
     deliveryTime: generateMinAndMaxTime(5, 30),
     deliverFee: generateRamdomNumber(4, 12, true) + 0.9,
     freeDeliveryAvailable: true,
+    isFavorite: true,
   }),
   generateStoreItemList({
     source: Store07,

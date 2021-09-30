@@ -13,6 +13,7 @@ export const marketPetStoresList = [
     distance: generateRamdomNumber(0, 12),
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
+    isFavorite: true,
   }),
   generateStoreItemList({
     source: Store09,

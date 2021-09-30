@@ -28,6 +28,7 @@ export const drugstoreAllStoresList = [
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
     coupon: generateRandomCoupon(),
+    isFavorite: true,
   }),
   generateStoreItemList({
     source: Store03,

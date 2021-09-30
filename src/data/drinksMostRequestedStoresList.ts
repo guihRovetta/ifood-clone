@@ -40,6 +40,7 @@ export const drinksMostRequestedStoresList = [
     deliveryTime: generateMinAndMaxTime(20, 100),
     deliverFee: generateRamdomNumber(3, 12, true) + 0.9,
     coupon: generateRandomCoupon(),
+    isFavorite: true,
   }),
   generateStoreItemList({
     source: Store03,
@@ -49,6 +50,7 @@ export const drinksMostRequestedStoresList = [
     distance: generateRamdomNumber(2, 8),
     deliveryTime: generateMinAndMaxTime(20, 100),
     deliverFee: generateRamdomNumber(3, 12, true) + 0.9,
+    isFavorite: true,
   }),
   generateStoreItemList({
     source: Store04,
@@ -87,6 +89,7 @@ export const drinksMostRequestedStoresList = [
     distance: generateRamdomNumber(2, 8),
     deliveryTime: generateMinAndMaxTime(20, 100),
     deliverFee: generateRamdomNumber(3, 12, true) + 0.9,
+    isFavorite: true,
   }),
   generateStoreItemList({
     source: Store08,
@@ -116,6 +119,7 @@ export const drinksMostRequestedStoresList = [
     distance: generateRamdomNumber(2, 8),
     deliveryTime: generateMinAndMaxTime(20, 100),
     coupon: generateRandomCoupon(),
+    isFavorite: true,
   }),
   generateStoreItemList({
     source: Store11,
@@ -165,6 +169,7 @@ export const drinksMostRequestedStoresList = [
     deliverFee: generateRamdomNumber(3, 12, true) + 0.9,
     isSuperRestaurant: true,
     coupon: generateRandomCoupon(),
+    isFavorite: true,
   }),
   generateStoreItemList({
     source: Store16,
