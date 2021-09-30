@@ -6,7 +6,7 @@ import { fonts } from '../../global/styles/fonts';
 export const styles = StyleSheet.create({
   horizontalStoreListHeaderWrapper: {
     marginBottom: 12,
-    marginRight: 12,
+    paddingHorizontal: 12,
   },
   horizontalStoreListFirstLineWrapper: {
     flexDirection: 'row',
@@ -28,6 +28,9 @@ export const styles = StyleSheet.create({
     fontFamily: fonts?.font?.light,
     fontSize: fonts?.size?.small,
     color: colors?.gray,
+  },
+  horizontalStoreListScrollViewContainer: {
+    paddingHorizontal: 12,
   },
   horizontalStoreListContainer: {
     flexDirection: 'row',

@@ -42,6 +42,7 @@ const HorizontalStoreList = ({
         horizontal
         showsHorizontalScrollIndicator={false}
         scrollEventThrottle={16}
+        contentContainerStyle={styles.horizontalStoreListScrollViewContainer}
       >
         <View>
           <View style={styles.horizontalStoreListContainer}>
