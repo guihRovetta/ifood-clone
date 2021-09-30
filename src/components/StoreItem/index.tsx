@@ -11,11 +11,10 @@ import { colors } from '../../global/styles/colors';
 import {
   SuperRestaurantIcon,
   StarIcon,
-  DeliveryFeeIcon,
-  CouponIcon,
   HeartOutlinedIcon,
   HeartFilledIcon,
 } from '../../global/styles/icons';
+import Beneficts from '../Beneficts';
 import { styles } from './styles';
 
 export type StoreInfoType = {
@@ -31,6 +30,10 @@ export type StoreInfoType = {
   freeDeliveryAvailable?: boolean;
   coupon?: string;
   isFavorite?: boolean;
+  recurrence?: {
+    numberOfTimes: number;
+    discountValue: string;
+  };
 };
 
 type StoreItemProps = {
@@ -51,6 +54,7 @@ const StoreItem = ({ storeInfo }: StoreItemProps) => {
     freeDeliveryAvailable,
     coupon,
     isFavorite,
+    recurrence,
   } = storeInfo || {};
 
   const [deliveryTimeMin, deliveryTimeMax] = deliveryTime;
@@ -126,23 +130,11 @@ const StoreItem = ({ storeInfo }: StoreItemProps) => {
         </View>
 
         <View style={styles.storeBenefictsContainer}>
-          {coupon ? (
-            <View style={styles.storeBenefictsWrapper}>
-              <CouponIcon width={10} height={10} fill={colors?.blue} />
-              <Text
-                style={styles.storeBenefictsText}
-              >{`Cupom de ${coupon} disponível`}</Text>
-            </View>
-          ) : freeDeliveryAvailable ? (
-            <View style={styles.storeBenefictsWrapper}>
-              <DeliveryFeeIcon width={10} height={10} fill={colors?.blue} />
-              <Text style={styles.storeBenefictsText}>
-                Entrega grátis disponível
-              </Text>
-            </View>
-          ) : (
-            <View style={styles.storeBenefictsEmptyWrapper} />
-          )}
+          <Beneficts
+            coupon={coupon}
+            freeDeliveryAvailable={freeDeliveryAvailable}
+            recurrence={recurrence}
+          />
         </View>
       </View>
     </View>

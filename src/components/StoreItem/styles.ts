@@ -79,23 +79,4 @@ export const styles = StyleSheet.create({
     marginTop: 8,
     alignItems: 'baseline',
   },
-  storeBenefictsWrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    padding: 4,
-    borderRadius: 4,
-    backgroundColor: colors?.lightBlue,
-  },
-  storeBenefictsText: {
-    fontFamily: fonts?.font?.medium,
-    fontSize: fonts?.size?.xsmall,
-    color: colors?.blue,
-    marginLeft: 4,
-  },
-  storeBenefictsEmptyWrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    padding: 4,
-    height: 4,
-  },
 });
