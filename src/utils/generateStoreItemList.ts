@@ -18,6 +18,7 @@ export const generateStoreItemList = (storeInfo: GenerateStoreInfoType) => {
     freeDelivery,
     freeDeliveryAvailable,
     coupon,
+    isFavorite,
   } = storeInfo || {};
 
   return {
@@ -43,5 +44,6 @@ export const generateStoreItemList = (storeInfo: GenerateStoreInfoType) => {
           minimumFractionDigits: 0,
         }).format(coupon)
       : '',
+    isFavorite,
   };
 };
