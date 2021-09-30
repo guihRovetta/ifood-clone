@@ -31,7 +31,6 @@ export const styles = StyleSheet.create({
     marginLeft: 4,
   },
   categoryContainer: {
-    marginLeft: 12,
     marginTop: 8,
   },
 });
