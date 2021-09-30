@@ -1,17 +1,11 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  Pressable,
-  ViewProps,
-  ImageSourcePropType,
-} from 'react-native';
+import { View, Text, Pressable, ImageSourcePropType } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 
 import Store from '../Store';
 import { styles } from './styles';
 
-type StoreListProps = ViewProps & {
+type StoreListProps = {
   title: string;
   showMoreButton?: boolean;
   items: {
@@ -24,10 +18,9 @@ const StoreList = ({
   title,
   showMoreButton = false,
   items,
-  ...rest
 }: StoreListProps) => {
   return (
-    <View {...rest}>
+    <View>
       <View style={styles.storeListHeaderContainer}>
         <Text style={styles.storeListTitle}>{title}</Text>
         {showMoreButton && (
@@ -48,6 +41,7 @@ const StoreList = ({
         ItemSeparatorComponent={() => (
           <View style={styles.storeListSeparatorComponent} />
         )}
+        contentContainerStyle={styles.storeListContentContainer}
       />
     </View>
   );

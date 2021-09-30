@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginRight: 12,
     marginBottom: 16,
+    paddingHorizontal: 12,
   },
   storeListTitle: {
     fontFamily: fonts?.font?.medium,
@@ -23,5 +24,8 @@ export const styles = StyleSheet.create({
   },
   storeListSeparatorComponent: {
     marginLeft: 16,
+  },
+  storeListContentContainer: {
+    paddingHorizontal: 12,
   },
 });
