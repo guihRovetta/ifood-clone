@@ -2,10 +2,12 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   genericList: {
-    paddingHorizontal: 12,
     marginTop: 32,
   },
-  genericBannerWrapper: {
+  genericBannerListWrapper: {
+    marginTop: 24,
+  },
+  genericUltraWideBannerWrapper: {
     marginTop: 32,
   },
   categoryImageListWrapper: {

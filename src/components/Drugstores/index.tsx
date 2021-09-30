@@ -22,7 +22,9 @@ const Drugstores = () => {
         <StoreBigCardList items={drugstoreStoreBigCardList?.secondLine} />
       </View>
 
-      <BannersList items={drugstoreBannersList} />
+      <View style={styles.genericBannerListWrapper}>
+        <BannersList items={drugstoreBannersList} />
+      </View>
 
       <View style={styles.productCardListWrapper}>
         <ProductCardList

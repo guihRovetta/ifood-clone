@@ -13,7 +13,9 @@ import { styles } from './styles';
 const Pets = () => {
   return (
     <View>
-      <BannersList items={petBannersList} />
+      <View style={styles.genericBannerListWrapper}>
+        <BannersList items={petBannersList} />
+      </View>
 
       <View style={styles.productCardListWrapper}>
         <ProductCardList

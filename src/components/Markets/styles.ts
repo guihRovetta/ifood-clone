@@ -3,13 +3,15 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   storeBigCardListWrapper: {
     paddingHorizontal: 12,
-    marginTop: 32,
+    marginTop: 16,
   },
-  genericBannerWrapper: {
+  genericBannerListWrapper: {
+    marginTop: 24,
+  },
+  genericUltraWideBannerWrapper: {
     marginTop: 32,
   },
   horizontalStoreListWrapper: {
-    paddingLeft: 12,
     marginTop: 32,
   },
   secondHorizontalStoreListWrapper: {

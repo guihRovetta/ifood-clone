@@ -22,33 +22,35 @@ const Restaurants = () => {
     <View>
       <CategoryImageList items={restaurantsCategoriesImageList} />
 
-      <BannersList items={restaurantsBannersList} />
+      <View style={styles.genericBannerListWrapper}>
+        <BannersList items={restaurantsBannersList} />
+      </View>
 
-      <StoreList
-        title="Últimas lojas"
-        showMoreButton
-        items={lastStoresList}
-        style={styles.genericList}
-      />
+      <View style={styles.genericList}>
+        <StoreList
+          title="Últimas lojas"
+          showMoreButton
+          items={lastStoresList}
+        />
+      </View>
 
-      <StoreList
-        title="Meus Favoritos"
-        showMoreButton
-        items={favoritesStoresList}
-        style={styles.genericList}
-      />
+      <View style={styles.genericList}>
+        <StoreList
+          title="Meus Favoritos"
+          showMoreButton
+          items={favoritesStoresList}
+        />
+      </View>
 
-      <View style={styles.genericBannerWrapper}>
+      <View style={styles.genericUltraWideBannerWrapper}>
         <UltraWideBanner source={Banner01} />
       </View>
 
-      <StoreList
-        title="Famosos no iFood"
-        items={ifoodFamousStoresList}
-        style={styles.genericList}
-      />
+      <View style={styles.genericList}>
+        <StoreList title="Famosos no iFood" items={ifoodFamousStoresList} />
+      </View>
 
-      <View style={styles.genericBannerWrapper}>
+      <View style={styles.genericUltraWideBannerWrapper}>
         <UltraWideBanner source={Banner02} />
       </View>
 

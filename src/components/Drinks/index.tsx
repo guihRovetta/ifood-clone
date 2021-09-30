@@ -18,9 +18,11 @@ const Drinks = () => {
     <View>
       <CategoryImageList items={drinksCategoriesImageList} />
 
-      <BannersList items={drinksBannersList} />
+      <View style={styles.genericBannerListWrapper}>
+        <BannersList items={drinksBannersList} />
+      </View>
 
-      <View style={styles.genericBannerWrapper}>
+      <View style={styles.genericUltraWideBannerWrapper}>
         <UltraWideBanner source={Banner01} />
       </View>
 

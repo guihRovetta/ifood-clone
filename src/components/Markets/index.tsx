@@ -26,9 +26,11 @@ const Markets = () => {
         <StoreBigCardList items={marketStoreBigCardList} />
       </View>
 
-      <BannersList items={marketBannersList} />
+      <View style={styles.genericBannerListWrapper}>
+        <BannersList items={marketBannersList} />
+      </View>
 
-      <View style={styles.genericBannerWrapper}>
+      <View style={styles.genericUltraWideBannerWrapper}>
         <UltraWideBanner source={Banner02} />
       </View>
 
