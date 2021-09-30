@@ -59,6 +59,10 @@ export const express30minStoresList = [
     distance: generateRamdomNumber(4, 10),
     deliveryTime: generateMinAndMaxTime(5, 30),
     deliverFee: generateRamdomNumber(4, 12, true) + 0.9,
+    recurrence: {
+      numberOfTimes: 3,
+      discountValue: generateRandomCoupon(),
+    },
   }),
   generateStoreItemList({
     source: Store08,

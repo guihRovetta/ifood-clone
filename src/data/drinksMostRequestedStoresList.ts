@@ -60,6 +60,10 @@ export const drinksMostRequestedStoresList = [
     distance: generateRamdomNumber(2, 8),
     deliveryTime: generateMinAndMaxTime(20, 100),
     deliverFee: generateRamdomNumber(3, 12, true) + 0.9,
+    recurrence: {
+      numberOfTimes: 3,
+      discountValue: generateRandomCoupon(),
+    },
   }),
   generateStoreItemList({
     source: Store05,
@@ -179,5 +183,9 @@ export const drinksMostRequestedStoresList = [
     distance: generateRamdomNumber(2, 8),
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(3, 12, true) + 0.9,
+    recurrence: {
+      numberOfTimes: 2,
+      discountValue: generateRandomCoupon(),
+    },
   }),
 ];

@@ -119,6 +119,10 @@ export const restaurantsStoresList = [
     distance: generateRamdomNumber(0, 12),
     deliveryTime: generateMinAndMaxTime(20, 120),
     deliverFee: generateRamdomNumber(0, 20, true) + 0.9,
+    recurrence: {
+      numberOfTimes: 3,
+      discountValue: generateRandomCoupon(),
+    },
   }),
   generateStoreItemList({
     source: Store11,
