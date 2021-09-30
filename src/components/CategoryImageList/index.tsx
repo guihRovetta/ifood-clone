@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageSourcePropType, ScrollView } from 'react-native';
+import { ImageSourcePropType, FlatList, View } from 'react-native';
 
 import CategoryImageItem from '../CategoryImageItem';
 import { styles } from './styles';
@@ -13,21 +13,17 @@ type CategoryImageListProps = {
 
 const CategoryImageList = ({ items }: CategoryImageListProps) => {
   return (
-    <ScrollView
+    <FlatList
       horizontal
+      data={items}
+      renderItem={({ item }) => (
+        <CategoryImageItem imageUrl={item?.uri} label={item?.label} />
+      )}
+      keyExtractor={(item) => item?.label}
       showsHorizontalScrollIndicator={false}
-      scrollEventThrottle={16}
-      style={styles.categoryListContainer}
-    >
-      {items?.map((item) => (
-        <CategoryImageItem
-          key={item?.label}
-          imageUrl={item?.uri}
-          label={item?.label}
-          style={styles.categoryContainer}
-        />
-      ))}
-    </ScrollView>
+      ItemSeparatorComponent={() => <View style={styles.categoryContainer} />}
+      contentContainerStyle={styles.categoryListContainer}
+    />
   );
 };
 
