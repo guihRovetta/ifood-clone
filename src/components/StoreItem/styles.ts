@@ -25,7 +25,14 @@ export const styles = StyleSheet.create({
   },
   storeHeaderContainer: {
     flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+    paddingRight: 8,
+  },
+  storeHeaderNameContainer: {
+    flexDirection: 'row',
     alignItems: 'center',
+    flex: 1,
   },
   storeName: {
     fontFamily: fonts?.font?.medium,
@@ -84,5 +91,11 @@ export const styles = StyleSheet.create({
     fontSize: fonts?.size?.xsmall,
     color: colors?.blue,
     marginLeft: 4,
+  },
+  storeBenefictsEmptyWrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 4,
+    height: 4,
   },
 });

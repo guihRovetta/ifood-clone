@@ -1,5 +1,11 @@
-import React from 'react';
-import { ImageSourcePropType, View, Image, Text } from 'react-native';
+import React, { useState } from 'react';
+import {
+  ImageSourcePropType,
+  View,
+  Image,
+  Text,
+  Pressable,
+} from 'react-native';
 
 import { colors } from '../../global/styles/colors';
 import {
@@ -7,6 +13,8 @@ import {
   StarIcon,
   DeliveryFeeIcon,
   CouponIcon,
+  HeartOutlinedIcon,
+  HeartFilledIcon,
 } from '../../global/styles/icons';
 import { styles } from './styles';
 
@@ -22,6 +30,7 @@ export type StoreInfoType = {
   freeDelivery?: boolean;
   freeDeliveryAvailable?: boolean;
   coupon?: string;
+  isFavorite?: boolean;
 };
 
 type StoreItemProps = {
@@ -41,9 +50,16 @@ const StoreItem = ({ storeInfo }: StoreItemProps) => {
     freeDelivery,
     freeDeliveryAvailable,
     coupon,
+    isFavorite,
   } = storeInfo || {};
 
   const [deliveryTimeMin, deliveryTimeMax] = deliveryTime;
+
+  const [favorite, setFavorite] = useState(!!isFavorite);
+
+  const handleFavoriteStore = () => {
+    setFavorite((previousState) => !previousState);
+  };
 
   return (
     <View style={styles.storeContainer}>
@@ -53,12 +69,21 @@ const StoreItem = ({ storeInfo }: StoreItemProps) => {
 
       <View style={styles.storeInfoContainer}>
         <View style={styles.storeHeaderContainer}>
-          <Text style={styles.storeName} numberOfLines={1}>
-            {name}
-          </Text>
-          {isSuperRestaurant && (
-            <SuperRestaurantIcon width={12} height={12} fill={colors?.main} />
-          )}
+          <View style={styles.storeHeaderNameContainer}>
+            <Text style={styles.storeName} numberOfLines={1}>
+              {name}
+            </Text>
+            {isSuperRestaurant && (
+              <SuperRestaurantIcon width={12} height={12} fill={colors?.main} />
+            )}
+          </View>
+          <Pressable onPress={handleFavoriteStore}>
+            {favorite ? (
+              <HeartFilledIcon width={16} height={16} fill={colors?.main} />
+            ) : (
+              <HeartOutlinedIcon width={16} height={16} fill={colors?.gray} />
+            )}
+          </Pressable>
         </View>
 
         <View style={styles.storeContentContainer}>
@@ -79,15 +104,9 @@ const StoreItem = ({ storeInfo }: StoreItemProps) => {
 
           <View style={styles.storeSeparator} />
 
-          {!freeDelivery ? (
-            <Text style={styles.storeGenericText}>{`${distance?.toFixed(
-              1
-            )} km`}</Text>
-          ) : (
-            <Text style={[styles.storeGenericText, styles.storeFreeDelivery]}>
-              Grátis
-            </Text>
-          )}
+          <Text style={styles.storeGenericText}>{`${distance?.toFixed(
+            1
+          )} km`}</Text>
         </View>
 
         <View style={styles.storeFooterContainer}>
@@ -97,30 +116,34 @@ const StoreItem = ({ storeInfo }: StoreItemProps) => {
 
           <View style={styles.storeSeparator} />
 
-          <Text style={styles.storeGenericText}>{deliverFee}</Text>
+          {freeDelivery ? (
+            <Text style={[styles.storeGenericText, styles.storeFreeDelivery]}>
+              Grátis
+            </Text>
+          ) : (
+            <Text style={styles.storeGenericText}>{deliverFee}</Text>
+          )}
         </View>
 
-        {(coupon || freeDeliveryAvailable) && (
-          <View style={styles.storeBenefictsContainer}>
-            {coupon ? (
-              <View style={styles.storeBenefictsWrapper}>
-                <CouponIcon width={10} height={10} fill={colors?.blue} />
-                <Text
-                  style={styles.storeBenefictsText}
-                >{`Cupom de ${coupon} disponível`}</Text>
-              </View>
-            ) : freeDeliveryAvailable ? (
-              <View style={styles.storeBenefictsWrapper}>
-                <DeliveryFeeIcon width={10} height={10} fill={colors?.blue} />
-                <Text style={styles.storeBenefictsText}>
-                  Entrega grátis disponível
-                </Text>
-              </View>
-            ) : (
-              <></>
-            )}
-          </View>
-        )}
+        <View style={styles.storeBenefictsContainer}>
+          {coupon ? (
+            <View style={styles.storeBenefictsWrapper}>
+              <CouponIcon width={10} height={10} fill={colors?.blue} />
+              <Text
+                style={styles.storeBenefictsText}
+              >{`Cupom de ${coupon} disponível`}</Text>
+            </View>
+          ) : freeDeliveryAvailable ? (
+            <View style={styles.storeBenefictsWrapper}>
+              <DeliveryFeeIcon width={10} height={10} fill={colors?.blue} />
+              <Text style={styles.storeBenefictsText}>
+                Entrega grátis disponível
+              </Text>
+            </View>
+          ) : (
+            <View style={styles.storeBenefictsEmptyWrapper} />
+          )}
+        </View>
       </View>
     </View>
   );
