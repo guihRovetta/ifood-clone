@@ -55,7 +55,8 @@ const HorizontalTabs = ({
       )}
       keyExtractor={(item) => item?.key}
       showsHorizontalScrollIndicator={false}
-      ItemSeparatorComponent={() => <View style={{ marginLeft: 16 }} />}
+      ItemSeparatorComponent={() => <View style={styles.tabSeparator} />}
+      contentContainerStyle={styles.horizontalTabsContainer}
     />
   );
 };

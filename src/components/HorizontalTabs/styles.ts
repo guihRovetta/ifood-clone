@@ -17,4 +17,10 @@ export const styles = StyleSheet.create({
   tabTextActive: {
     color: colors?.main,
   },
+  tabSeparator: {
+    marginLeft: 16,
+  },
+  horizontalTabsContainer: {
+    paddingHorizontal: 12,
+  },
 });
