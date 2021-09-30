@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageSourcePropType, ScrollView } from 'react-native';
+import { ImageSourcePropType, FlatList, View } from 'react-native';
 
 import Banner from '../Banner';
 import { styles } from './styles';
@@ -10,16 +10,15 @@ type BannersListProps = {
 
 const BannersList = ({ items }: BannersListProps) => {
   return (
-    <ScrollView
+    <FlatList
       horizontal
+      data={items}
+      renderItem={({ item }) => <Banner source={item} />}
+      keyExtractor={(item) => item?.toString()}
       showsHorizontalScrollIndicator={false}
-      scrollEventThrottle={16}
-      style={styles.bannerListContainer}
-    >
-      {items?.map((item, index) => (
-        <Banner key={index} source={item} style={styles.bannerContainer} />
-      ))}
-    </ScrollView>
+      ItemSeparatorComponent={() => <View style={styles.bannerContainer} />}
+      contentContainerStyle={styles.bannerListContainer}
+    />
   );
 };
 
