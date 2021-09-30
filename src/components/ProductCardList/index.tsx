@@ -21,7 +21,9 @@ const ProductCardList = ({
         <Text style={styles.productCardListTitle}>{title}</Text>
         {showMoreButton && (
           <Pressable>
-            <Text style={styles.storeListShowMoreButtonText}>Ver mais</Text>
+            <Text style={styles.productCardListShowMoreButtonText}>
+              Ver mais
+            </Text>
           </Pressable>
         )}
       </View>
@@ -35,6 +37,7 @@ const ProductCardList = ({
         ItemSeparatorComponent={() => (
           <View style={styles.productCardListSeparatorComponent} />
         )}
+        contentContainerStyle={styles.productCardListContainer}
       />
     </View>
   );

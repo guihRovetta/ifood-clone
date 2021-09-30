@@ -8,20 +8,23 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginRight: 12,
     marginBottom: 16,
+    paddingHorizontal: 12,
   },
   productCardListTitle: {
     fontFamily: fonts?.font?.medium,
     fontSize: fonts?.size?.large,
     color: colors?.mediumGray,
   },
-  storeListShowMoreButtonText: {
+  productCardListShowMoreButtonText: {
     fontFamily: fonts?.font?.regular,
     fontSize: fonts?.size?.small,
     color: colors?.main,
   },
   productCardListSeparatorComponent: {
     marginRight: 8,
+  },
+  productCardListContainer: {
+    paddingHorizontal: 12,
   },
 });
