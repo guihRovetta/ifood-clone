@@ -17,15 +17,18 @@ export const styles = StyleSheet.create({
   productImage: {
     width: '100%',
     height: 88,
+    justifyContent: 'flex-start',
   },
   productStoreContainer: {
     overflow: 'hidden',
     borderRadius: 24,
+    width: 24,
+    height: 24,
     borderWidth: 1,
     borderColor: colors?.lightWhite,
-    position: 'absolute',
-    top: 8,
-    left: 8,
+    margin: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   productStoreImage: {
     width: 24,
