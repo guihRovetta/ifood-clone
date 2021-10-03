@@ -1,5 +1,11 @@
 import React from 'react';
-import { View, Image, Text, ImageSourcePropType } from 'react-native';
+import {
+  View,
+  Image,
+  Text,
+  ImageSourcePropType,
+  ImageBackground,
+} from 'react-native';
 
 import { styles } from './styles';
 
@@ -28,15 +34,19 @@ const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <View style={styles.productContainer}>
       <View style={styles.productHeaderContainer}>
-        <Image source={source} resizeMode="cover" style={styles.productImage} />
-
-        <View style={styles.productStoreContainer}>
-          <Image
-            source={store?.source}
-            resizeMode="contain"
-            style={styles.productStoreImage}
-          />
-        </View>
+        <ImageBackground
+          source={source}
+          resizeMode="cover"
+          style={styles.productImage}
+        >
+          <View style={styles.productStoreContainer}>
+            <Image
+              source={store?.source}
+              resizeMode="contain"
+              style={styles.productStoreImage}
+            />
+          </View>
+        </ImageBackground>
       </View>
 
       <View style={styles.productContentContainer}>
