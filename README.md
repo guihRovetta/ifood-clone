@@ -15,6 +15,20 @@
 </div>
 <br/>
 
+## 📸 Imagens
+<div style="display:flex">
+  <img src="./.github/restaurants.png" width="260px" style="margin-right:16px" alt="Restaurantes">
+  <img src="./.github/markets.png" width="260px" style="margin-right:16px" alt="Mercados">
+  <img src="./.github/drinks.png" width="260px" alt="Bebidas">
+</div>
+
+<div style="display:flex; margin-top:16px">
+  <img src="./.github/drugstores.png" width="260px" style="margin-right:16px" alt="Farmácias">
+  <img src="./.github/pets.png" width="260px" style="margin-right:16px" alt="Pets">
+  <img src="./.github/express.png" width="260px" alt="Express">
+</div>
+<br/>
+
 ## 💻 Projeto
 
 Clone da interface do aplicativo iFood, para esse projeto foi utilizado o conceito de **Atomic Design** para o desenvolvimento dos componentes e os commits foram realizados utilizando o padrão de **Conventional Commits**.
