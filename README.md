@@ -3,15 +3,15 @@
 ## 🎥 Gifs
 
 <div style="display:flex">
-  <img src="./.github/restaurants.gif" width="200px" style="margin-right:8px" alt="Restaurantes">
-  <img src="./.github/markets.gif" width="200px" style="margin-right:8px" alt="Mercados">
-  <img src="./.github/drinks.gif" width="200px" alt="Bebidas">
+  <img src="./.github/restaurants.gif" width="260px" style="margin-right:16px" alt="Restaurantes">
+  <img src="./.github/markets.gif" width="260px" style="margin-right:16px" alt="Mercados">
+  <img src="./.github/drinks.gif" width="260px" alt="Bebidas">
 </div>
 
-<div style="display:flex; margin-top:8px">
-  <img src="./.github/drugstores.gif" width="200px" style="margin-right:8px" alt="Farmácias">
-  <img src="./.github/pets.gif" width="200px" style="margin-right:8px" alt="Pets">
-  <img src="./.github/express.gif" width="200px" alt="Express">
+<div style="display:flex; margin-top:16px">
+  <img src="./.github/drugstores.gif" width="260px" style="margin-right:16px" alt="Farmácias">
+  <img src="./.github/pets.gif" width="260px" style="margin-right:16px" alt="Pets">
+  <img src="./.github/express.gif" width="260px" alt="Express">
 </div>
 <br/>
 
