@@ -1,5 +1,6 @@
 <h1 align="center">
   <img src="http://whatsrel.com.br/wp-content/uploads/2020/12/vagas-rela%C3%A7%C3%B5es-internacionais.png" width="80px" alt="iFood Logo">
+  <br/>
   iFood Clone UI
 </h1>
 
