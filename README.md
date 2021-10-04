@@ -1,5 +1,20 @@
 <h1 align="center">iFood Clone UI</h1>
 
+## 🎥 Gifs
+
+<div style="display:flex">
+  <img src="./.github/restaurants.gif" width="200px" style="margin-right:8px" alt="Restaurantes">
+  <img src="./.github/markets.gif" width="200px" style="margin-right:8px" alt="Mercados">
+  <img src="./.github/drinks.gif" width="200px" alt="Bebidas">
+</div>
+
+<div style="display:flex; margin-top:8px">
+  <img src="./.github/drugstores.gif" width="200px" style="margin-right:8px" alt="Farmácias">
+  <img src="./.github/pets.gif" width="200px" style="margin-right:8px" alt="Pets">
+  <img src="./.github/express.gif" width="200px" alt="Express">
+</div>
+<br/>
+
 ## 💻 Projeto
 
 Clone da interface do aplicativo iFood, para esse projeto foi utilizado o conceito de **Atomic Design** para o desenvolvimento dos componentes e os commits foram realizados utilizando o padrão de **Conventional Commits**.
@@ -10,12 +25,13 @@ O objetivo principal do projeto foi de aprender as particularidades, componentes
 
 ## 🖥️ Telas 
 
-- [ ] Início
+- [x] Início
   - [x] Restaurantes
-  - [ ] Mercados
-  - [ ] Bebidas
-  - [ ] Farmácias
-  - [ ] Bebidas
+  - [x] Mercados
+  - [x] Bebidas
+  - [x] Farmácias
+  - [x] Pets
+  - [x] Express
 - [ ] Busca
 - [ ] Pedidos
 - [ ] Perfil
