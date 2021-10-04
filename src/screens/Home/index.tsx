@@ -59,7 +59,7 @@ const Home = () => {
             styles.header,
             {
               marginTop: HEADER_HEIGHT - 10,
-              paddingTop: 15,
+              paddingVertical: 15,
               backgroundColor: colors?.white,
               transform: [{ translateY }],
             },
