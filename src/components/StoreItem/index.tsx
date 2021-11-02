@@ -31,8 +31,8 @@ export type StoreInfoType = {
   coupon?: string;
   isFavorite?: boolean;
   recurrence?: {
-    numberOfTimes: number;
-    discountValue: string;
+    numberOfTimes?: number;
+    discountValue?: string;
   };
 };
 

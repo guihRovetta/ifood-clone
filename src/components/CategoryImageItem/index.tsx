@@ -20,7 +20,7 @@ const CategoryImageItem = ({ imageUrl, label }: CategoryImageItemProps) => {
       <Pressable style={styles.categoryContainer}>
         <Image
           source={imageUrl}
-          resizeMode="contain"
+          resizeMode="cover"
           style={styles.categoryImage}
         />
         <Text style={styles.categoryLabel}>{label}</Text>
