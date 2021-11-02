@@ -19,6 +19,7 @@ export const styles = StyleSheet.create({
   storeImage: {
     width: 60,
     height: 60,
+    backgroundColor: colors?.lighterGray,
   },
   storeLabel: {
     fontFamily: fonts?.font?.light,

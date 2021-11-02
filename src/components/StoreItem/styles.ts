@@ -18,6 +18,7 @@ export const styles = StyleSheet.create({
   storeImage: {
     width: 56,
     height: 56,
+    backgroundColor: colors?.lighterGray,
   },
   storeInfoContainer: {
     flex: 1,
@@ -48,6 +49,7 @@ export const styles = StyleSheet.create({
   storeRatingContainer: {
     flexDirection: 'row',
     alignItems: 'center',
+    marginTop: 2,
   },
   storeRating: {
     fontFamily: fonts?.font?.bold,
@@ -76,7 +78,7 @@ export const styles = StyleSheet.create({
     color: colors?.green,
   },
   storeBenefictsContainer: {
-    marginTop: 8,
+    marginTop: 6,
     alignItems: 'baseline',
   },
 });

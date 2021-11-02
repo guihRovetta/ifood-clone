@@ -23,6 +23,7 @@ export const styles = StyleSheet.create({
   storeImage: {
     width: 56,
     height: 56,
+    backgroundColor: colors?.lighterGray,
   },
   storeName: {
     fontFamily: fonts?.font?.medium,

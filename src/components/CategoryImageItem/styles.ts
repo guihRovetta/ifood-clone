@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
   categoryImage: {
     width: 76,
     height: 58,
+    backgroundColor: colors?.lighterGray,
   },
   categoryLabel: {
     fontFamily: fonts?.font?.light,

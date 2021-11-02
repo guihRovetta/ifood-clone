@@ -18,6 +18,7 @@ export const styles = StyleSheet.create({
     width: '100%',
     height: 88,
     justifyContent: 'flex-start',
+    backgroundColor: colors?.lighterGray,
   },
   productStoreContainer: {
     overflow: 'hidden',
@@ -33,6 +34,7 @@ export const styles = StyleSheet.create({
   productStoreImage: {
     width: 24,
     height: 24,
+    backgroundColor: colors?.lighterGray,
   },
   productContentContainer: {
     padding: 8,
